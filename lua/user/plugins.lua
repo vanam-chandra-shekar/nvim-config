@@ -49,6 +49,14 @@ return packer.startup(function(use)
        'nvim-treesitter/nvim-treesitter',
     }
 
+  --file explorer
+  use {'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+  }
+
+
 
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 end)

@@ -15,11 +15,11 @@ keymap("n","<C-l>","<C-w>l",opt)
 
 
 keymap("v","p",'"_dP',opt)
-keymap("n","<leader>e",":Lex 25<cr>",opt)
 keymap("v","<A-j>",":m '>+1<CR>gv=gv",opt)
 keymap("v","<A-k>",":m .-2<CR>==gv",opt)
 
 --insertmode
 keymap("i","jj","<ESC>",opt)
 
-
+--nvimtree
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opt)
