@@ -1,11 +1,38 @@
-
 local options = {
-    relativenumber = true,
-    number = true,
-    tabstop = 4,
-    shiftwidth = 4,
+	number = true,
+	relativenumber = true,
+	tabstop = 4,
+	cmdheight=1,
+	backup = false,
+	completeopt={"menuone","noselect"},
+	fileencoding="utf-8",
+	conceallevel =0,
+	hlsearch=true,
+	ignorecase=true,
+	mouse= "a",
+	pumheight=10,
+	showmode= false,
+	showtabline=2,
+	smartcase=true,
+	smartindent=true,
+	splitbelow=true,
+	splitright=true,
+	swapfile=false,
+	termguicolors=true,
+	undofile=true,
+	timeoutlen=1000,
+	updatetime=300,
+	writebackup = false,
+	expandtab=true,
+	shiftwidth=4,
+	cursorline=true,
+	numberwidth=4,
+	--signcolumn="yes",
+	wrap = false,
+	scrolloff=8,
+	sidescrolloff=8,
 }
 
-for key,value in options do
-    vim.opt[key]=value
+for k,v in pairs(options) do
+	vim.opt[k] = v
 end

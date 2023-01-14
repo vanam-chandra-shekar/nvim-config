@@ -1,1 +1,5 @@
 require "user.options"
+require "user.plugins"
+require "user.colour"
+require "user.lualine"
+require "user.keymaps"
