@@ -45,6 +45,15 @@ packer.startup(function(use)
         'nvim-telescope/telescope.nvim', branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    
+    --treesitter
+    use "nvim-treesitter/nvim-treesitter"
+    
+
+    use {
+	"windwp/nvim-autopairs"
+    }
+
 
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"

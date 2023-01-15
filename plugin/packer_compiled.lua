@@ -84,10 +84,20 @@ _G.packer_plugins = {
     path = "C:\\Users\\vanam\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\material.nvim",
     url = "https://github.com/marko-cerovac/material.nvim"
   },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "C:\\Users\\vanam\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "C:\\Users\\vanam\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",
     url = "https://github.com/nvim-tree/nvim-tree.lua"
+  },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "C:\\Users\\vanam\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = false,

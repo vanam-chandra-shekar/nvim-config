@@ -3,6 +3,7 @@ local opt = {noremap=true,silent=true} local term_opt= {silent=true}
 local keymap = vim.api.nvim_set_keymap
 
 
+
 keymap("","<Space>","Nop",opt)
 vim.g.mapleader=" "
 vim.g.maplocalleader=" "
@@ -31,8 +32,5 @@ keymap("n","<leader>sv","<C-w>v",opt)
 keymap("n","<leader>sh",":split<CR>",opt)
 keymap("n","<leader>sx",":close<CR>",opt)
 
-
-
-
-
+keymap("n","ff",":Telescope find_files<CR> ",opt)
 
