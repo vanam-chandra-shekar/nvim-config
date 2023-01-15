@@ -20,7 +20,19 @@ keymap("v","<A-k>",":m .-2<CR>==gv",opt)
 
 --insertmode
 keymap("i","jj","<ESC>",opt)
+keymap("v","jk","<ESC>",opt)
 
 
 --explorer
-keymap("n","<leader>e",":Lex 25<CR>",opt)
+keymap("n","<leader>e",":NvimTreeToggle<CR>",opt)
+
+--adding easy split
+keymap("n","<leader>sv","<C-w>v",opt)
+keymap("n","<leader>sh",":split<CR>",opt)
+keymap("n","<leader>sx",":close<CR>",opt)
+
+
+
+
+
+

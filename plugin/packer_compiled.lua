@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\vanam\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\material.nvim",
     url = "https://github.com/marko-cerovac/material.nvim"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "C:\\Users\\vanam\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
+  },
   ["nvim-web-devicons"] = {
     loaded = false,
     needs_bufread = false,
@@ -104,6 +109,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\vanam\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\vanam\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   }
 }
 
