@@ -34,3 +34,8 @@ keymap("n","<leader>sx",":close<CR>",opt)
 
 keymap("n","ff",":Telescope find_files<CR> ",opt)
 
+keymap("n","<leader>/",":ToggleTerm<CR>",opt)
+keymap("t","<C-/><C-N>","<ESC>",opt)
+
+
+

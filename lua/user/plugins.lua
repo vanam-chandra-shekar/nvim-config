@@ -54,6 +54,7 @@ packer.startup(function(use)
 	"windwp/nvim-autopairs"
     }
 
+    use {"akinsho/toggleterm.nvim", tag = '*'}
 
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
