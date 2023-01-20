@@ -6,12 +6,12 @@ end
 
 term.setup({
     cmd = 'clear',
-    size = 10,
+    size = 40,
     open_mapping = [[<C-\>]],
     hide_numbers = true,
     autochdir = true,
     start_in_insert = true,
-    direction = 'horizontal',
+    direction = 'float',
     hidden = false,
     border = 'curved',
     auto_scroll = true,
@@ -34,6 +34,13 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 
 
+local Terminal  = require('toggleterm.terminal').Terminal
+
+local lazygit = Terminal:new({cmd = 'lazygit',direction = 'float'})
+
+function _LAZYGIT()
+    lazygit:toggle()
+end
 
 
 

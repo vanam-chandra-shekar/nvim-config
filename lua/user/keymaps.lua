@@ -35,7 +35,10 @@ keymap("n","<leader>sx",":close<CR>",opt)
 keymap("n","ff",":Telescope find_files<CR> ",opt)
 
 keymap("n","<leader>/",":ToggleTerm<CR>",opt)
-keymap("t","<C-/><C-N>","<ESC>",opt)
+
+--telescope colour change
+keymap("n","<leader>cc",":lua require('material.functions').find_style()<CR>",opt)
+keymap("n","<leader>lz",":lua _LAZYGIT()<CR>",opt)
 
 
 

@@ -6,7 +6,7 @@ if not ok then
 end
 
 tsconfig.setup({
-    ensure_installed = { "cpp", "lua","help" },
+    ensure_installed = { "cpp", "lua","help","python" },
 	highlight = {
 		enable = true, -- false will disable the whole extension
 		disable = {}, -- list of language that will be disabled
