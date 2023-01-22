@@ -56,6 +56,14 @@ packer.startup(function(use)
 
     use {"akinsho/toggleterm.nvim", tag = '*'}
 
+
+    use({
+	    "Pocco81/auto-save.nvim",
+	    config = function()
+		     require("auto-save").setup {}
+	    end,
+    })
+
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
 end)

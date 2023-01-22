@@ -21,5 +21,5 @@ function _RUN()
 end
 
 
-keymap("n","<leader>b","<cmd>lua _COMPILE()<CR>",opt)
+keymap("n","<leader>b",":w<CR> <cmd>lua _COMPILE()<CR>",opt)
 keymap("n","<leader>n","<cmd>lua _RUN()<CR>",opt)
