@@ -64,6 +64,27 @@ packer.startup(function(use)
 	    end,
     })
 
+    --hop
+    use {
+        'phaazon/hop.nvim',
+        branch = 'v2',
+        config = function()
+            require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+        end
+    }
+
+    use({
+        "kylechui/nvim-surround",
+        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+        config = function()
+            require("nvim-surround").setup({})
+        end
+     })
+
+
+    
+    use "lukas-reineke/indent-blankline.nvim"
+
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
 end)

@@ -40,5 +40,8 @@ keymap("n","<leader>/",":ToggleTerm<CR>",opt)
 keymap("n","<leader>cc",":lua require('material.functions').find_style()<CR>",opt)
 keymap("n","<leader>lz",":lua _LAZYGIT()<CR>",opt)
 
+--hop
+keymap("n","<leader>hw",":HopWord <CR>",opt)
+keymap("n","<leader>hl",":HopLine <CR>",opt)
 
 
