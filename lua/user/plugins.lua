@@ -27,18 +27,15 @@ packer.startup(function(use)
 
     use {
         'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 
 
 
     use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-        'nvim-tree/nvim-web-devicons', -- optional, for file icons
-        },
+        'nvim-tree/nvim-tree.lua'
     }
     
+    use 'nvim-tree/nvim-web-devicons' 
 
     --telescope
     use {
@@ -84,6 +81,13 @@ packer.startup(function(use)
 
     
     use "lukas-reineke/indent-blankline.nvim"
+
+
+
+    use "mg979/vim-visual-multi"
+
+
+
 
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"

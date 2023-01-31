@@ -1,6 +1,6 @@
 local name = vim.fn.expand("%:t")
-local exename = string.gsub(name, ".cpp", "")
-local compile = "g++ "..name.." -o "..exename
+local exename = string.gsub(name, ".c", "")
+local compile = "gcc "..name.." -o "..exename
 local run = ".\\"..exename
 local opt = {noremap=true,silent=true} local term_opt= {silent=true}
 local keymap = vim.api.nvim_set_keymap
