@@ -1,6 +1,3 @@
-local fn = vim.fn
-
--- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd [[
   augroup packer_user_config
     autocmd!
@@ -8,13 +5,12 @@ vim.cmd [[
   augroup end
 ]]
 
--- Use a protected call so we don't error out on first use
-local status_ok, packer = pcall(require, "packer")
-if not status_ok then
-  return
+
+local ok,packer = pcall(require,"packer")
+if not ok then
+    return
 end
 
--- Have packer use a popup window
 packer.init {
   display = {
     open_fn = function()
@@ -23,40 +19,77 @@ packer.init {
   },
 }
 
--- Install your plugins here
-return packer.startup(function(use)
-  -- My plugins here
-  use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use 'folke/tokyonight.nvim'
-  --auto compleate
-  use "hrsh7th/nvim-cmp"
-  use "hrsh7th/cmp-buffer"
-  use "hrsh7th/cmp-path"
-  use "hrsh7th/cmp-cmdline"
-  use "saadparwaiz1/cmp_luasnip"
-  use "hrsh7th/cmp-nvim-lsp"
+packer.startup(function(use)
+    use "wbthomason/packer.nvim"
+    
+    --color scheme
+    use 'marko-cerovac/material.nvim'
 
-  --snipt engine
-  use "L3MON4D3/LuaSnip"
-  use "rafamadriz/friendly-snippets"  
-  use "neovim/nvim-lspconfig"
-  use { "williamboman/mason.nvim" }
-  use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
-  use 'jose-elias-alvarez/null-ls.nvim'
-  
-  use {
-       'nvim-treesitter/nvim-treesitter',
+    use {
+        'nvim-lualine/lualine.nvim',
     }
 
-  --file explorer
-  use {'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
-  }
+
+
+    use {
+        'nvim-tree/nvim-tree.lua'
+    }
+    
+    use 'nvim-tree/nvim-web-devicons' 
+
+    --telescope
+    use {
+        'nvim-telescope/telescope.nvim', branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    
+    --treesitter
+    use "nvim-treesitter/nvim-treesitter"
+    
+
+    use {
+	"windwp/nvim-autopairs"
+    }
+
+    use {"akinsho/toggleterm.nvim", tag = '*'}
+
+
+    use({
+	    "Pocco81/auto-save.nvim",
+	    config = function()
+		     require("auto-save").setup {}
+	    end,
+    })
+
+    --hop
+    use {
+        'phaazon/hop.nvim',
+        branch = 'v2',
+        config = function()
+            require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+        end
+    }
+
+    use({
+        "kylechui/nvim-surround",
+        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+        config = function()
+            require("nvim-surround").setup({})
+        end
+     })
+
+
+    
+    use "lukas-reineke/indent-blankline.nvim"
 
 
 
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+    use "mg979/vim-visual-multi"
+
+
+
+
+    use "nvim-lua/popup.nvim"
+    use "nvim-lua/plenary.nvim"
 end)
+

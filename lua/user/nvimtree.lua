@@ -10,6 +10,10 @@ end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+
 nvim_tree.setup {
   update_focused_file = {
     enable = true,
@@ -54,8 +58,8 @@ nvim_tree.setup {
     },
   },
   view = {
-    width = 30,
-    side = "left",
+    width = 25,
+    side = "right",
     mappings = {
       list = {
         { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
@@ -65,3 +69,4 @@ nvim_tree.setup {
     },
   },
 }
+
