@@ -27,3 +27,8 @@ if not value then
   value = 0
 end
 
+value = value + change
+redis.call("SET", key, value)
+
+return value
+`)
