@@ -35,3 +35,8 @@ return value`)
 keys := []string{"my_counter"}
 values := []interface{}{+1}
 num, err := incrBy.Run(ctx, rdb, keys, values...).Int()
+
+local result = redis.pcall("rename", "foo", "bar")
+if type(result) == 'table' and result.err then
+  redis.log(redis.LOG_NOTICE, "rename failed", result.err)
+end
