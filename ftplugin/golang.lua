@@ -30,5 +30,8 @@ end
 value = value + change
 redis.call("SET", key, value)
 
-return value
-`)
+return value`)
+
+keys := []string{"my_counter"}
+values := []interface{}{+1}
+num, err := incrBy.Run(ctx, rdb, keys, values...).Int()
